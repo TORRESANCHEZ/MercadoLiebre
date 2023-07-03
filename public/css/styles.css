@@ -1,0 +1,358 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+    --color-amarillo:#EAC926;
+    --color-azul:#03264C;
+    --color-celeste:#1259c3;
+    --color-azulHam:#0044AA; 
+    --color-grisoscuro:#666;
+    --color-gris-claro:#ebebeb;
+    --color-verde: #39b54a;
+ }
+
+ body {
+   font-family: 'Roboto', sans-serif;
+   font-size: 12px;
+   background-color: var(--color-gris-claro);
+ }
+
+ .main-header {
+    background-color: var(--color-amarillo);
+    padding: 20px;
+
+ }
+ 
+ h2 {
+   font-size: 24px;
+   margin-left: 4%;
+   margin-right: 4%;
+ }
+
+
+ 
+ h4 {
+    font-size: 16px;
+ }
+
+
+
+.logo {
+    width: 35%;
+    padding: 10px;
+}
+
+.search-bar {
+   width: 35%;
+
+}
+
+.search-bar input {
+   width: 90%;
+}
+
+.main-topbar {
+      
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;  
+   width: 100%;
+   align-items: center;
+}
+
+
+.main-navbar {
+   text-decoration: none;
+   color: black;
+   display: none;
+}
+
+
+
+ul {
+   list-style: none;
+   text-decoration: none;
+}
+
+
+
+div.burger-menu{
+   text-align: center;
+}
+
+div.burger-menu i{
+   background-color: var(--color-azulHam);
+   border-radius: 5px;
+   color: #FFF;
+   font-size: 20px;
+   height: 40px;
+   margin: 10px 0px 20px 0px;
+   padding: 10px;
+   width: 40px;
+}
+
+
+main section {
+   background-color: var(--color-gris-claro);
+}
+
+
+
+main section article{
+   
+   background-color: #fff;    
+   margin: 10px auto;
+}
+
+main section article img{
+   width: 100%;
+}
+
+main section article i{
+   display: block;
+   font-size: 16px;
+   padding: 5px;
+   width: 30px;
+   height: 30px;
+   border: 1px solid var(--color-verde);
+   background-color: #FFF;
+   border-radius: 50%;
+   position: absolute;
+   right: 20px;
+   top: -15px;
+
+}
+
+.articulos {
+   border-top: solid 1px #ebebeb;
+   padding: 15px;
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+article:hover {
+   box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+
+.articulos i {
+   color: var(--color-verde);
+}
+
+.fa-truck:before {
+   content: "\f0d1"; /* combina dos iconos*/
+}
+
+.fa-truck {
+   transition: all 450ms;
+}
+
+article:hover .fa-truck {
+   transform: rotate(-90deg);
+}
+
+main section > div {
+   margin: 10px 0px;
+   padding: 10px;
+}
+
+
+.precio {
+   font-size: 18px;
+   margin: 0;
+   width: 30%;
+   
+}
+
+.descuento {
+   font-size: 16px;
+   margin: 0;
+   color: var(--color-verde);
+   width: 70%;
+}
+
+
+footer {
+   
+   color: var(--color-grisoscuro);
+   padding: 30px;
+
+   text-align: center;
+}
+
+footer >div {
+   margin:3em 0;
+
+}
+
+footer section div {
+   padding: 10px 0px;
+}
+
+footer p {
+   font-size: 12px;
+   color: var(--color-gris-oscuro);
+}
+
+footer i {
+   text-align: center;
+   font-size: 3em;
+}
+
+footer section .pie:hover {
+   color: red;
+} /*no logre poner color al logo*/
+
+
+.copyright {
+   font-size: 12px;
+   text-align: left;
+}
+
+.descripcion{
+   display: none;
+}
+
+.listaproducto {
+   display: flex;
+   flex-wrap: wrap;   
+}
+
+.main-navbar ul {
+   display: flex;
+}
+
+/*DISENO DE REGISTRO*/
+
+.container {
+   background-color: var(--color-amarillo);
+   padding: 30px;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+}
+
+.container2 {
+   width: 250px;
+   flex-direction: column;
+   align-items: center;
+}
+
+.fotopass {
+   flex-direction: column;
+   align-items: center;
+}
+
+.btnIngresar {
+   padding: 0px 35%;
+}
+
+.btnIngresar button:hover {
+   background-color: #0022AA;
+   color:#0022AA;
+}
+
+.envioreset button:hover {
+   background-color: #0022AA;
+   color:#0022AA;
+}
+
+/*cambios cuando hay cambio de viewport*/
+
+@media (min-width: 361px){
+
+   .burger-menu {
+      display: none;
+   }
+
+   .descripcion{
+      display: flex;
+   }
+
+   .descripcion:hover {
+      color: red;
+     /* display:none;*/
+      transition-duration: 0.5;
+   }
+
+  .listaproducto article {
+   width:40% ;
+  }
+
+
+  .main-navbar {
+      display: flex;
+      justify-content: space-between;
+   }
+   .menu1 {
+      width: 40%;
+      flex-wrap: wrap;
+      flex-direction: row;
+   }
+   .menu2 {
+      flex-direction: column;
+   }
+
+   .precio, .descuento {
+      width: 50%;
+   }
+
+   .main-navbar li {
+   margin: 15px;
+   }
+  
+}
+
+@media screen and (min-width: 769px){
+   
+   .burger-menu {
+      display: none;
+   }
+
+   .listaproducto article {
+      width: 20%;
+   }
+
+   .main-navbar {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .main-navbar ul {
+      display: flex;
+   }
+
+   .main-navbar li {
+      margin: 15px;
+   }
+   
+   .menu2 {
+      flex-direction: row;
+   }
+
+   
+   footer section {
+      display: flex;
+   }
+
+   footer section div {
+      padding: 10px 10px;
+   }
+
+   .copyright {
+      font-size: 12px;
+      text-align: center;
+   
+   }
+
+/*   main section article{
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  } */
+   }
+
